@@ -1,0 +1,59 @@
+# Arquivos e pastas do Python
+__pycache__/
+*.py[cod]
+*.pyo
+*.pyd
+*.so
+
+# Ambiente virtual
+env/
+venv/
+.venv/
+
+# Arquivos de configuração do VSCode ou outros editores
+.vscode/
+.idea/
+*.swp
+
+# Banco de dados local (ex: SQLite)
+*.sqlite3
+*.db
+
+# Arquivos de log
+*.log
+
+# Arquivos de ambiente
+.env
+
+# Arquivos Jupyter
+*.ipynb_checkpoints
+
+# Dados temporários ou arquivos CSV locais
+data/
+*.csv
+*.xlsx
+
+# Modelos treinados
+*.h5
+*.hdf5
+*.pkl
+*.joblib
+models/
+
+# Diretórios de build
+build/
+dist/
+*.egg-info/
+
+# Pytest / testes
+.coverage
+.pytest_cache/
+htmlcov/
+
+# Cache do pip
+pip-wheel-metadata/
+__pypackages__/
+
+# Arquivos temporários do sistema
+.DS_Store
+Thumbs.db
