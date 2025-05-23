@@ -5,6 +5,17 @@ from app import app, request
 @app.route('/patient/profile/', methods = ['POST'])
 def patient_profile():
     # route to post patient basic data
+    ''''
+    json model to post something about patient
+    {
+        "user_id":""
+        "age":"",
+        "gender":"",
+        "height":"",
+        "weight":"",
+        "pre_existing_conditions":""
+    }
+    '''
     data = request.get_json()
     patient = PatientController()
     result = patient.patient_profile(data)

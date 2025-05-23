@@ -1,8 +1,6 @@
 from app.models.user_db import AddUserDB
 from app import app, jsonify, request, db
 from app.models import User
-from app import datetime
-
 
 class AuthController:
     '''# configuration
@@ -23,7 +21,7 @@ class AuthController:
             created_at=self.date
         )
         user.add_user_to_db()
-'''
+    '''
     # Existing user controller
     @staticmethod
     def verify_existing_user(email):
@@ -81,7 +79,10 @@ class AuthController:
                 {
                     'message':'user found'
                 }
-            ), 200
-            
-            
-            
+            ), 200 
+        
+    @staticmethod
+    def register_hospital(data):
+        name =  data.get('name')
+        response = AddUserDB.add_hospital(name)
+        return response

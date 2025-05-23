@@ -5,6 +5,7 @@ from app import request, jsonify, datetime
 class SymptomController():
 
     # post symptoms
+    @staticmethod
     def post_symptoms(data):
         symptoms = data.get('values', [])
         patient_id = data.get('patient_id')

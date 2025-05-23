@@ -1,4 +1,4 @@
-from app.routes import auth_routes, diagnosis_routes
+from app.routes import auth_routes, diagnosis_routes, symptoms_routes
 from app.routes import auth_routes, patient_routes, history_routes
 from app import app
 

@@ -8,7 +8,7 @@ def symptoms():
     result = symp.post_symptoms(data)
     return result
 
-@app.route('/symptom/patient/<int:id>', methods=['GET'])
+@app.route('/symptoms/patient/<int:id>', methods=['GET'])
 def get_symptoms(id):
     data = SymptomController()
     response = data.get_symptoms(id=id)

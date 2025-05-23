@@ -1,6 +1,6 @@
 from app.controllers.auth_controller import AuthController
 from app.models.user_db import AddUserDB, User
-from app import app, jsonify
+from app import app, jsonify, request
 
 #home
 @app.route('/')
@@ -24,4 +24,15 @@ def register():
 def login():
     data = AuthController()
     response = data.validadate_login()
+    return response
+
+@app.route('/hospital/register/', methods=['POST'])
+def hospital_registed():
+    data = request.get_json()
+
+    if not data:
+        error_response = jsonify({'message':'fild everything'}), 400
+        return error_response
+
+    response = AuthController.register_hospital(data=data)
     return response

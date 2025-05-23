@@ -1,9 +1,15 @@
+from app.controllers.history_controller import HistoryController
 from app import app
 
-@app.route('/patient/history/')
-def patient_history():
-    return 'list history'
 
-@app.route('/patient/history/id')
-def patient_history_id():
-    return 'patient_history_id'
+@app.route('/history/patients/', methods=['GET'])
+def history_patient():
+    history = HistoryController()
+    response = history.patient_history()
+    return response
+
+@app.route('/history/users/', methods=['GET'])
+def history_users ():
+    history = HistoryController()
+    response = history.user_history()
+    return response
