@@ -1,3 +1,7 @@
-from app import create_database
+from app.routes import auth_routes, diagnosis_routes
+from app.routes import auth_routes, patient_routes, history_routes
+from app import app
 
-create_database()
+
+if __name__ == '__main__':
+    app.run(debug=True)
