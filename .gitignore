@@ -38,7 +38,6 @@ data/
 *.hdf5
 *.pkl
 *.joblib
-models/
 
 # Diretórios de build
 build/
