@@ -15,9 +15,7 @@ venv/
 .idea/
 *.swp
 
-# Banco de dados local (ex: SQLite)
-*.sqlite3
-*.db
+
 
 # Arquivos de log
 *.log
