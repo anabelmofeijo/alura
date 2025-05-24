@@ -21,6 +21,7 @@ def patient_profile():
     result = patient.patient_profile(data)
     return result
 
+# access an specif patient using id
 @app.route('/patient/profile/<int:id>', methods=['GET'])
 def get_patient_profile(id):
     data = PatientController()
