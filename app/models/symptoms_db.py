@@ -32,21 +32,18 @@ class AddSymptomsDB:
 
                 db.session.add(data)
                 db.session.commit()
-                print("added successfully!")
+                return jsonify({'message':'added successfully'}), 200
 
             except Exception as e:
-                print (f'Erro: {e}')
+                return jsonify({'message':str(e)}),500
 
-
+    @staticmethod
     def get_symptoms_db(id):
         datas = Symptoms.query.filter(Symptoms.patient_id==id).all()
         result = []
 
         if not datas:
-            return jsonify ( {
-                    'message':'not found'
-                }
-            ), 200
+            return jsonify ({'message':'not found'}), 400
         
         for data in datas:
             result.append(
@@ -55,6 +52,6 @@ class AddSymptomsDB:
                     'symptom_list': data.symptom_list,
                     'recorded_at': data.recorded_at
                 }
-            ), 200
+            )
 
-
+        return jsonify(result), 200

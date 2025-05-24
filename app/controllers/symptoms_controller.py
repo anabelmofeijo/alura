@@ -29,8 +29,6 @@ class SymptomController():
     
     @staticmethod
     def get_symptoms(id):
-        db = AddSymptomsDB()
-        response = db.get_symptoms_db(id)
+        response = AddSymptomsDB.get_symptoms_db(id)
         return response
 
-        

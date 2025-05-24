@@ -17,7 +17,7 @@ class DiagnosisController:
                 result.append(
                     {
                         'patient_id': data.patient_id,
-                        'model_result': data.model_reult,
+                        'model_result': data.model_result,
                         'manchester_severity': data.manchester_severity
                     }
                 )
